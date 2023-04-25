@@ -1,0 +1,130 @@
+/* Chat container */
+.chat-container {
+    background-color: #f2f2f2;
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Chat header */
+.chat-header {
+    background-color: #075e54;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.chat-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Messages container */
+.messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    height: 470px;
+    background-color: #fff;
+}
+
+/* Message styles */
+.message {
+    margin: 10px;
+    padding: 10px;
+    max-width: 300px;
+    word-wrap: break-word;
+    border-radius: 5px;
+    position: relative;
+}
+
+.message.sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+.message.sent .metadata {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.message.sent .metadata .time {
+    margin-left: 5px;
+    color: #999;
+}
+
+.message.sent .metadata .status {
+    margin-left: 5px;
+    color: #6aa84f;
+}
+
+.message.received {
+    background-color: #fff;
+    align-self: flex-start;
+}
+
+.message.received .sender {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #000;
+}
+
+.message.received .metadata {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.message.received .metadata .time {
+    margin-left: 5px;
+    color: #999;
+}
+
+/* Input form styles */
+.message-form {
+    display: flex;
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+#message-input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+#send-button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: #075e54;
+    cursor: pointer;
+}
+
+#send-button:focus {
+    outline: none;
+}
+
+/* Responsive styles */
+@media (max-width: 450px) {
+    .chat-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .messages {
+        height: 70vh;
+    }
+}
